@@ -1,0 +1,19 @@
+{
+  "name": "@mbears/web-server",
+  "version": "0.0.1",
+  "description": "一个简单的web服务",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MBearo/web-server.git"
+  },
+  "author": "weiqi wu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MBearo/web-server/issues"
+  },
+  "homepage": "https://github.com/MBearo/web-server#readme"
+}
