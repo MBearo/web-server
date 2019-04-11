@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "一个简单的web服务",
   "main": "index.js",
+  "bin": {
+    "http-server": "sss"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +18,16 @@
   "bugs": {
     "url": "https://github.com/MBearo/web-server/issues"
   },
-  "homepage": "https://github.com/MBearo/web-server#readme"
+  "homepage": "https://github.com/MBearo/web-server#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0"
+  },
+  "dependencies": {
+    "koa": "^2.7.0"
+  }
 }
