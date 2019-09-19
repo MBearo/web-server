@@ -9,7 +9,7 @@ const request = require('./request')
 const response = require('./response')
 
 class Koa {
-  contructor () {
+  constructor () {
     // 存储中间件
     this.middlewares = []
 
@@ -52,6 +52,7 @@ class Koa {
     return dispatch(0) // 默认执行一次
   }
   handleRequest (req, res) {
+    console.log(this)
     // 创建 ctx 上下文对象
     let ctx = this.createContext(req, res)
 

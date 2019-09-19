@@ -19,10 +19,11 @@
 
 const http = require('http')
 
-let server = http.createServer(handleRequest)
-server.listen(3000)
+let xxx = http.createServer(handleRequest)
+xxx.listen(3000)
 
 function handleRequest (req, res) {
+  console.log(this)
   console.log(req)
   res.end('111')
 }
