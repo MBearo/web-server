@@ -29,6 +29,11 @@ $ web-server -port 8888
 $ web-server -path ./dist
 ```
 
+```bash
+# HTML5 history mode
+$ web-server -history
+```
+
 ## License
 
 MIT

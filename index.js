@@ -4,6 +4,7 @@ const net = require('net')
 const serve = require('koa-static')
 const Koa = require('koa')
 const app = new Koa()
+const history = require('./history')
 // const order = ['-port', '-path', 'list']
 
 // Get parameters
@@ -13,8 +14,12 @@ const args = process.argv.slice(2)
 
 let staticPath = '.'
 let port = '3000'
+let isHistoryMode = false
 
 checkArgument().then(_ => {
+  if (isHistoryMode) {
+    app.use(history(path.resolve(staticPath)))
+  }
   app.use(serve(path.resolve(staticPath)))
   app.listen(port)
   console.log(`web-server start on http://localhost:${port}`)
@@ -33,6 +38,8 @@ async function checkArgument () {
       if (args[i + 1]) {
         staticPath = args[i + 1]
       }
+    } else if (args[i] === '-history') {
+      isHistoryMode = true
     }
   }
 }
