@@ -1,11 +1,6 @@
 # web-server
 
 [![NPM version][npm-image]][npm-url]
-[![Build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
-[![Dependency Status][david-image]][david-url]
-[![License][license-image]][license-url]
-[![Downloads][downloads-image]][downloads-url]
 
 A minimalist web server.
 
@@ -14,3 +9,10 @@ A minimalist web server.
 ```bash
 $ npm install @mbears/web-server
 ```
+
+## License
+
+MIT
+
+[npm-image]: https://img.shields.io/npm/v/@mbears/web-server.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/@mbears/web-server
