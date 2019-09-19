@@ -4,7 +4,7 @@
   "description": "一个简单的web服务",
   "main": "index.js",
   "bin": {
-    "http-server": "sss"
+    "web-server": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
