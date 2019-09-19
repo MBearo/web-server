@@ -7,7 +7,26 @@ A minimalist web server.
 ## Install
 
 ```bash
-$ npm install @mbears/web-server
+$ npm install @mbears/web-server -g
+```
+
+## Example
+
+You can run `web-server` in project directory to start a simple server.
+
+```bash
+# simple demo
+$ web-server
+```
+
+```bash
+# custom port
+$ web-server -port 8888
+```
+
+```bash
+# custom path
+$ web-server -path ./dist
 ```
 
 ## License
