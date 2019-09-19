@@ -24,7 +24,6 @@ async function checkArgument () {
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '-port') {
       if (args[i + 1]) {
-        console.log(args[i + 1])
         await portIsOccupied(args[i + 1])
         port = args[i + 1]
       } else {
