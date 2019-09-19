@@ -1,6 +1,6 @@
 {
   "name": "@mbears/web-server",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A minimalist web server",
   "main": "index.js",
   "keywords": [
