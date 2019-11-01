@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const path = require('path')
 const net = require('net')
-const serve = require('koa-static')
+const serve = require('./static')
 const Koa = require('koa')
 const app = new Koa()
 const history = require('./history')
@@ -15,12 +15,15 @@ const args = process.argv.slice(2)
 let staticPath = '.'
 let port = '3000'
 let isHistoryMode = false
+let publicPath = ''
 
 checkArgument().then(_ => {
+  console.log('1111')
+
   if (isHistoryMode) {
     app.use(history(path.resolve(staticPath)))
   }
-  app.use(serve(path.resolve(staticPath)))
+  app.use(serve(path.resolve(staticPath), null, publicPath))
   app.listen(port)
   console.log(`web-server start on http://localhost:${port}`)
 })
@@ -40,6 +43,10 @@ async function checkArgument () {
       }
     } else if (args[i] === '-history') {
       isHistoryMode = true
+    } else if (args[i] === '-publicPath') {
+      if (args[i + 1]) {
+        publicPath = args[i + 1]
+      }
     }
   }
 }
@@ -48,7 +55,7 @@ async function checkArgument () {
 function portIsOccupied (port) {
   return new Promise((resolve, reject) => {
     // Create server and listen this port
-    let server = net.createServer().listen(port)
+    const server = net.createServer().listen(port)
     server.on('listening', _ => { // Executing this code indicates that the port is not occupied
       server.close() // close server
       resolve()
