@@ -18,8 +18,6 @@ let isHistoryMode = false
 let publicPath = ''
 
 checkArgument().then(_ => {
-  console.log('1111')
-
   if (isHistoryMode) {
     app.use(history(path.resolve(staticPath)))
   }
