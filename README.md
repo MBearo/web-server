@@ -4,6 +4,10 @@
 
 A minimalist web server.
 
+## Environment
+
+Node.js >= 10
+
 ## Install
 
 ```bash
