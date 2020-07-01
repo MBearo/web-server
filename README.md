@@ -24,18 +24,33 @@ $ web-server
 ```
 
 ```bash
-# custom port
-$ web-server -port 8888
+# custom port.default:3000
+$ web-server --port 8888
 ```
 
 ```bash
-# custom path
-$ web-server -path ./dist
+# custom path.default:index.html
+$ web-server --path ./dist
 ```
 
 ```bash
 # HTML5 history mode
-$ web-server -history
+$ web-server --history
+```
+
+```bash
+# publicPath
+$ web-server --publicPath
+```
+
+```bash
+# cache mode.default:3600s
+$ web-server --cache
+```
+
+```bash
+# custom cache time(s)
+$ web-server --cache 2000
 ```
 
 ## License

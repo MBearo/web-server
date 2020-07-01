@@ -67,7 +67,11 @@ function serve (root, opts, publicPath) {
     if (ctx.body != null || ctx.status !== 404) return // eslint-disable-line
 
     try {
-      await send(ctx, ctx.path, opts)
+      let newPath = ctx.path
+      if (publicPath) {
+        newPath = newPath.replace(`/${publicPath}`, '')
+      }
+      await send(ctx, newPath, opts)
     } catch (err) {
       if (err.status !== 404) {
         throw err
